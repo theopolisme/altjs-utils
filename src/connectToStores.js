@@ -89,7 +89,7 @@ function connectToStores(Spec, Component = Spec) {
     }
 
     componentWillUnmount() {
-      this.storeListeners.forEach(unlisten => unlisten())
+      this.storeListeners && this.storeListeners.forEach(unlisten => unlisten())
     }
 
     onChange() {
